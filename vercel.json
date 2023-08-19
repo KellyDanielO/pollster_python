@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "pollster/wsgi.py",
+      "user": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "3.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "pollster/wsgi.py"
+    }
+  ]
+}
